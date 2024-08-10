@@ -1,0 +1,44 @@
+@import "../core";
+
+.banner {
+	padding-top: 0;
+
+	&__slider {
+		width: 100%;
+		height: auto;
+		.swiper-slide {
+			width: 100%;
+			height: auto;
+			img {
+				@include imgMaxW;
+			}
+		}
+		&-nav {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			padding: 0 2rem;
+			z-index: 2;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			& > .swiper-button-prev,
+			& > .swiper-button-prev {
+				filter: drop-shadow(0px 0px 16.6px rgba(0, 0, 0, 0.4));
+			}
+			img {
+				@include maxw($mob) {
+					width: 1rem;
+					height: auto;
+				}
+			}
+		}
+	}
+	&__pagination {
+		margin-top: 2rem;
+		@include maxw($mob) {
+			margin-top: 1rem;
+		}
+	}
+}

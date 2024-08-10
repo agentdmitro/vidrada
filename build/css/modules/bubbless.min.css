@@ -1,0 +1,53 @@
+.bubbles {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 20;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.bubbles.active {
+  opacity: 1;
+}
+.bubbles li + li {
+  margin-top: 2.9rem;
+}
+.bubbles a {
+  width: 4.6rem;
+  aspect-ratio: 1/1;
+  transition: all 0.2s ease;
+  height: auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.bubbles a img,
+.bubbles a svg,
+.bubbles a path {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+@media (any-hover: hover) {
+  .bubbles a:hover {
+    transform: scale(1.05);
+  }
+  .bubbles a:active {
+    transform: scale(0.95);
+  }
+}
+.bubbles a.scroll-top circle,
+.bubbles a.scroll-top path {
+  transition: all 0.2s ease;
+}
+@media (any-hover: hover) {
+  .bubbles a.scroll-top:hover circle {
+    stroke: #27b4ed;
+  }
+  .bubbles a.scroll-top:hover path {
+    fill: #27b4ed;
+  }
+}

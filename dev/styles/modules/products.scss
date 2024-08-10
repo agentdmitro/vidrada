@@ -1,0 +1,75 @@
+@import "../core";
+
+// product card
+
+.product__card {
+	width: calc(25% - 0.9rem);
+	&-wrap {
+		display: block;
+	}
+	&-img {
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 38rem;
+		@include maxw($mob) {
+			min-height: auto;
+		}
+		.hover {
+			display: none;
+		}
+		img {
+			transition: all 0.2s ease;
+			@include imgMaxW;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				img {
+					transform: scale(1.4);
+				}
+				.default {
+					display: none;
+				}
+				.hover {
+					display: block;
+				}
+			}
+		}
+	}
+	&-info {
+		margin-top: 1.7rem;
+		h4 {
+			font-family: "M PLUS Rounded 1c", sans-serif;
+			font-size: 1.8rem;
+			font-weight: 500;
+			transition: all 0.2s ease;
+		}
+	}
+	&-price {
+		display: flex;
+		align-items: center;
+		margin-top: 0.5rem;
+		gap: 1rem;
+		.price-old {
+			font-size: 1.4rem;
+			font-weight: 300;
+			text-decoration: line-through;
+		}
+		.price-new {
+			font-size: 1.6rem;
+			font-weight: 400;
+			transition: all 0.2s ease;
+		}
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			h4 {
+				color: $mainColor;
+			}
+			.price-new {
+				color: $mainColor;
+			}
+		}
+	}
+}

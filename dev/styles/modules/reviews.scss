@@ -1,0 +1,35 @@
+@import "../core";
+
+.reviews {
+	&__wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2.25rem;
+		margin-top: 3rem;
+		@include maxw($mob) {
+			margin-top: 2rem;
+		}
+	}
+	.swiper {
+		@include maxw($mob) {
+			margin-right: -1.5rem;
+			padding-right: 1.5rem;
+		}
+	}
+	.swiper-slide {
+		width: 25.4rem;
+		img {
+			@include imgMaxW;
+		}
+		@include maxw($mob) {
+			width: 20rem;
+		}
+	}
+	.swiper-button-prev,
+	.swiper-button-next {
+		@include maxw($mob) {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,38 @@
+.reviews__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.25rem;
+  margin-top: 3rem;
+}
+@media only screen and (max-width: 576px) {
+  .reviews__wrap {
+    margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .reviews .swiper {
+    margin-right: -1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+.reviews .swiper-slide {
+  width: 25.4rem;
+}
+.reviews .swiper-slide img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+@media only screen and (max-width: 576px) {
+  .reviews .swiper-slide {
+    width: 20rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .reviews .swiper-button-prev,
+  .reviews .swiper-button-next {
+    display: none;
+  }
+}

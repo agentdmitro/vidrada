@@ -1,0 +1,43 @@
+.proposal .container {
+  max-width: 127rem;
+}
+.proposal__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.25rem;
+  margin-top: 3rem;
+}
+@media only screen and (max-width: 576px) {
+  .proposal__wrap {
+    margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .proposal .swiper {
+    margin-right: -1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+.proposal .swiper-slide {
+  width: 25.4rem;
+}
+@media only screen and (max-width: 576px) {
+  .proposal .swiper-slide {
+    width: 20rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .proposal .swiper-button-prev,
+  .proposal .swiper-button-next {
+    display: none;
+  }
+}
+.proposal .product__card {
+  width: 100%;
+}
+.proposal__bttn {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}

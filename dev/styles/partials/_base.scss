@@ -1,0 +1,186 @@
+@import "../core";
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	// Set global fonts here
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img,
+svg {
+	vertical-align: top;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+}
+
+* {
+	position: relative;
+}
+
+html {
+	font-size: 10px;
+	background-color: $bgColor;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "M PLUS Rounded 1c", sans-serif;
+
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	&.menu-open {
+		overflow: hidden;
+		height: 100vh;
+	}
+
+	&.scroll-disable {
+		height: 100vh;
+		overflow: hidden;
+	}
+}
+
+section {
+	overflow: hidden;
+	z-index: 1;
+	padding: 3rem 0;
+}
+
+.section__head {
+	h2 {
+		text-transform: uppercase;
+		letter-spacing: 0.13rem;
+	}
+}
+
+main {
+	flex: 1;
+	padding-top: 12.7rem;
+	@include maxw($headerBreak) {
+		padding-top: 12.5rem;
+	}
+	@include maxw($tablet) {
+		padding-top: 9.5rem;
+	}
+	@include maxw($mob) {
+		padding-top: 7.5rem;
+	}
+}
+
+//===========================
+// Helpers
+//===========================
+
+.container {
+	margin: 0 auto;
+	width: 100%;
+	max-width: rem($maxWidthContainer);
+	padding: 0 rem(calc($containerPadding/2));
+}
+
+.tac {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.hidden {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+.img-maxw {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.swiper {
+	&-button {
+		&-prev {
+			transition: all 0.2s ease;
+			cursor: pointer;
+			img {
+				transition: all 0.2s ease;
+			}
+			&:hover {
+				img {
+					transform: translateX(-2px);
+				}
+			}
+			&:active {
+				img {
+					transform: translateX(-5px);
+				}
+			}
+		}
+		&-next {
+			transition: all 0.2s ease;
+			cursor: pointer;
+			img {
+				transition: all 0.2s ease;
+			}
+			&:hover {
+				img {
+					transform: translateX(2px);
+				}
+			}
+			&:active {
+				img {
+					transform: translateX(5px);
+				}
+			}
+		}
+	}
+	&-pagination {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.8rem;
+		@include maxw($mob) {
+			gap: 0.5rem;
+		}
+		&-bullet {
+			background-color: $secondaryColor;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 1rem;
+			height: 1rem;
+			border-radius: 50%;
+			cursor: pointer;
+			transition: all 0.2s ease;
+			&-active {
+				background-color: $mainColor;
+			}
+			@include maxw($mob) {
+				width: 0.7rem;
+				height: 0.7rem;
+			}
+			&:not(.swiper-pagination-bullet-active) {
+				@media (any-hover: hover) {
+					&:hover {
+						background-color: $mainColor;
+						opacity: 0.8;
+					}
+				}
+			}
+		}
+	}
+}

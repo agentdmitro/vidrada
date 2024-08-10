@@ -1,0 +1,72 @@
+.product__card {
+  width: calc(25% - 0.9rem);
+}
+.product__card-wrap {
+  display: block;
+}
+.product__card-img {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38rem;
+}
+@media only screen and (max-width: 576px) {
+  .product__card-img {
+    min-height: auto;
+  }
+}
+.product__card-img .hover {
+  display: none;
+}
+.product__card-img img {
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+@media (any-hover: hover) {
+  .product__card-img:hover img {
+    transform: scale(1.4);
+  }
+  .product__card-img:hover .default {
+    display: none;
+  }
+  .product__card-img:hover .hover {
+    display: block;
+  }
+}
+.product__card-info {
+  margin-top: 1.7rem;
+}
+.product__card-info h4 {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.product__card-price {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  gap: 1rem;
+}
+.product__card-price .price-old {
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-decoration: line-through;
+}
+.product__card-price .price-new {
+  font-size: 1.6rem;
+  font-weight: 400;
+  transition: all 0.2s ease;
+}
+@media (any-hover: hover) {
+  .product__card:hover h4 {
+    color: #27b4ed;
+  }
+  .product__card:hover .price-new {
+    color: #27b4ed;
+  }
+}

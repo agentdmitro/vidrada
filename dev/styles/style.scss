@@ -1,0 +1,30 @@
+@import "core";
+
+@import "partials/fonts";
+@import "partials/base";
+@import "partials/typography";
+@import "partials/bttns";
+
+// Header start
+@import "modules/header";
+// Header end
+
+// Components
+@import "modules/banner";
+@import "modules/proposal";
+@import "modules/categories";
+@import "modules/about";
+@import "modules/info";
+@import "modules/reviews";
+
+// woocommerce general
+@import "modules/products";
+//
+
+@import "modules/tabs";
+@import "modules/popup";
+
+// Footer start
+@import "modules/footer";
+@import "modules/bubbless";
+// Footer end
