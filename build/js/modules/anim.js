@@ -12,7 +12,7 @@ function translateElem(elem, elemX, elemY, elemIndex) {
 if ($(".proposal").length) {
 	$(".proposal").each((index, section) => {
 		translateElem($(section).find(".proposal__bttn"), 0, 70, 0);
-		translateElem($(section).find(".section__head"), 0, 40, 0);
+		translateElem($(section).find(".section__head"), 0, 20, 0);
 
 		var proposalScene = new ScrollMagic.Scene({
 			triggerElement: section,
@@ -24,7 +24,7 @@ if ($(".proposal").length) {
 					y: 70 - 70 * event.progress,
 				});
 				gsap.to($(section).find(".section__head"), {
-					y: 40 - 40 * event.progress,
+					y: 20 - 20 * event.progress,
 					duration: 1,
 				});
 			})
@@ -70,7 +70,7 @@ if ($(".categories").length) {
 
 		var categoriesScene = new ScrollMagic.Scene({
 			triggerElement: section,
-			triggerHook: 0.5,
+			triggerHook: 1,
 			duration: window.innerHeight / 2,
 		})
 			.on("progress", function (event) {

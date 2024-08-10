@@ -98,7 +98,7 @@ main {
 }
 @media only screen and (max-width: 576px) {
   main {
-    padding-top: 7.5rem;
+    padding-top: 8.5rem;
   }
 }
 
@@ -895,6 +895,12 @@ button {
   align-items: center;
   justify-content: center;
 }
+@media only screen and (max-width: 576px) {
+  .categories__item {
+    flex: 100%;
+    overflow: hidden;
+  }
+}
 .categories__item-img {
   width: 100%;
   height: auto;
@@ -937,7 +943,7 @@ button {
 }
 @media only screen and (max-width: 576px) {
   .categories__item-info {
-    bottom: 1.5rem;
+    bottom: 4.5rem;
   }
 }
 .categories__item-info h2 {
@@ -1264,6 +1270,11 @@ button {
   font-weight: 500;
   transition: all 0.2s ease;
 }
+@media only screen and (max-width: 576px) {
+  .product__card-info h4 {
+    font-size: 1.6rem;
+  }
+}
 .product__card-price {
   display: flex;
   align-items: center;
@@ -1275,10 +1286,20 @@ button {
   font-weight: 300;
   text-decoration: line-through;
 }
+@media only screen and (max-width: 576px) {
+  .product__card-price .price-old {
+    font-size: 1.1rem;
+  }
+}
 .product__card-price .price-new {
   font-size: 1.6rem;
   font-weight: 400;
   transition: all 0.2s ease;
+}
+@media only screen and (max-width: 576px) {
+  .product__card-price .price-new {
+    font-size: 1.3rem;
+  }
 }
 @media (any-hover: hover) {
   .product__card:hover h4 {

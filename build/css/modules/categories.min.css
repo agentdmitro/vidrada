@@ -8,6 +8,12 @@
   align-items: center;
   justify-content: center;
 }
+@media only screen and (max-width: 576px) {
+  .categories__item {
+    flex: 100%;
+    overflow: hidden;
+  }
+}
 .categories__item-img {
   width: 100%;
   height: auto;
@@ -50,7 +56,7 @@
 }
 @media only screen and (max-width: 576px) {
   .categories__item-info {
-    bottom: 1.5rem;
+    bottom: 4.5rem;
   }
 }
 .categories__item-info h2 {
