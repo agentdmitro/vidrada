@@ -812,6 +812,11 @@ button {
   height: auto;
   object-fit: cover;
 }
+.banner__slider .swiper-slide a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .banner__slider-nav {
   position: absolute;
   top: 50%;
