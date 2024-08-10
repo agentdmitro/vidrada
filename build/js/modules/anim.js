@@ -16,7 +16,7 @@ if ($(".proposal").length) {
 
 		var proposalScene = new ScrollMagic.Scene({
 			triggerElement: section,
-			triggerHook: 0.5,
+			triggerHook: 1,
 			duration: window.innerHeight / 2,
 		})
 			.on("progress", function (event) {
