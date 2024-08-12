@@ -9,10 +9,18 @@ import "./modules/base.js";
 addEventListener("DOMContentLoaded", function () {
 	var menuBreakpoint = window.matchMedia("(max-width: 1140.2px)");
 
-	if (menuBreakpoint.matches && $(".menu-item-has-children ")) {
-		$(".menu-item-has-children ").click(function (e) {
+	if (menuBreakpoint.matches) {
+		$(".menu-item-has-children").click(function (e) {
+			e.stopPropagation(); // Запобігає закриттю батьківських меню
+			var submenu = $(this).children(".sub-menu");
+
+			if (submenu.is(":visible")) {
+				submenu.slideUp();
+			} else {
+				submenu.slideDown();
+			}
+
 			$(this).toggleClass("active");
-			$(this).children(".sub-menu").toggle();
 		});
 	}
 });

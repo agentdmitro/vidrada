@@ -12,6 +12,7 @@ function translateElem(elem, elemX, elemY, elemIndex) {
 if ($(".proposal").length) {
 	$(".proposal").each((index, section) => {
 		translateElem($(section).find(".proposal__bttn"), 0, 70, 0);
+		translateElem($(section).find(".proposal__wrap"), 0, 30, 0);
 		translateElem($(section).find(".section__head"), 0, 20, 0);
 
 		var proposalScene = new ScrollMagic.Scene({
@@ -23,6 +24,9 @@ if ($(".proposal").length) {
 				gsap.to($(section).find(".proposal__bttn"), {
 					y: 70 - 70 * event.progress,
 				});
+				gsap.to($(section).find(".proposal__wrap"), {
+					y: 30 - 30 * event.progress,
+				});
 				gsap.to($(section).find(".section__head"), {
 					y: 20 - 20 * event.progress,
 					duration: 1,
@@ -32,30 +36,30 @@ if ($(".proposal").length) {
 	});
 }
 
-// Products
-if ($(".product__card").length) {
-	const productItems = document.querySelectorAll(".product__card");
-	if (productItems) {
-		productItems.forEach((productItem, index) => {
-			const effectiveIndex = index % 4;
+// // Products
+// if ($(".product__card").length) {
+// 	const productItems = document.querySelectorAll(".product__card");
+// 	if (productItems) {
+// 		productItems.forEach((productItem, index) => {
+// 			const effectiveIndex = index % 4;
 
-			translateElem($(productItem), 0, (effectiveIndex + 1) * 15, 0);
+// 			translateElem($(productItem), 0, (effectiveIndex + 1) * 15, 0);
 
-			var productScene = new ScrollMagic.Scene({
-				triggerElement: productItem,
-				triggerHook: 0.8,
-				duration: window.innerHeight / 2,
-			})
-				.on("progress", function (event) {
-					gsap.to($(productItem), {
-						y: (effectiveIndex + 1) * 15 - (effectiveIndex + 1) * 15 * event.progress,
-						duration: 0.5,
-					});
-				})
-				.addTo(controller);
-		});
-	}
-}
+// 			var productScene = new ScrollMagic.Scene({
+// 				triggerElement: productItem,
+// 				triggerHook: 0.8,
+// 				duration: window.innerHeight / 2,
+// 			})
+// 				.on("progress", function (event) {
+// 					gsap.to($(productItem), {
+// 						y: (effectiveIndex + 1) * 15 - (effectiveIndex + 1) * 15 * event.progress,
+// 						duration: 0.5,
+// 					});
+// 				})
+// 				.addTo(controller);
+// 		});
+// 	}
+// }
 
 // categories
 if ($(".categories").length) {
@@ -100,7 +104,7 @@ if ($(".about").length) {
 
 	var aboutScene = new ScrollMagic.Scene({
 		triggerElement: ".about",
-		triggerHook: 0.5,
+		triggerHook: 0.7,
 		duration: window.innerHeight / 2,
 	})
 		.on("progress", function (event) {
@@ -129,7 +133,7 @@ if ($(".info").length) {
 
 	var infoScene = new ScrollMagic.Scene({
 		triggerElement: ".info",
-		triggerHook: 0.5,
+		triggerHook: 0.7,
 		duration: window.innerHeight / 2,
 	})
 		.on("progress", function (event) {
@@ -152,7 +156,7 @@ if ($(".reviews").length) {
 
 	var proposalScene = new ScrollMagic.Scene({
 		triggerElement: ".reviews",
-		triggerHook: 0.5,
+		triggerHook: 0.7,
 		duration: window.innerHeight / 2,
 	})
 		.on("progress", function (event) {
