@@ -16,6 +16,17 @@
   height: auto;
   object-fit: cover;
 }
+.banner__slider .swiper-slide img.mob {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .banner__slider .swiper-slide img.mob {
+    display: block;
+  }
+  .banner__slider .swiper-slide img.desktop {
+    display: none;
+  }
+}
 .banner__slider .swiper-slide a {
   display: flex;
   align-items: center;
