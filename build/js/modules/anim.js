@@ -104,7 +104,7 @@ if ($(".about").length) {
 
 	var aboutScene = new ScrollMagic.Scene({
 		triggerElement: ".about",
-		triggerHook: 0.7,
+		triggerHook: 1,
 		duration: window.innerHeight / 2,
 	})
 		.on("progress", function (event) {
@@ -133,7 +133,7 @@ if ($(".info").length) {
 
 	var infoScene = new ScrollMagic.Scene({
 		triggerElement: ".info",
-		triggerHook: 0.7,
+		triggerHook: 1,
 		duration: window.innerHeight / 2,
 	})
 		.on("progress", function (event) {
@@ -156,7 +156,7 @@ if ($(".reviews").length) {
 
 	var proposalScene = new ScrollMagic.Scene({
 		triggerElement: ".reviews",
-		triggerHook: 0.7,
+		triggerHook: 1,
 		duration: window.innerHeight / 2,
 	})
 		.on("progress", function (event) {
