@@ -93,8 +93,6 @@ if ($(".categories").length) {
 
 // about
 if ($(".about").length) {
-	translateElem($(".about h2"), 0, 30, 0);
-
 	var aboutTranslate = [];
 
 	$(".about__content-wrap > *").each((index, item) => {
@@ -108,8 +106,6 @@ if ($(".about").length) {
 		duration: window.innerHeight / 2,
 	})
 		.on("progress", function (event) {
-			gsap.to($(".about h2"), { y: 30 - 30 * event.progress });
-
 			$(".about__content-wrap > *").each((index, item) => {
 				gsap.to($(item), {
 					y: aboutTranslate[index] - aboutTranslate[index] * event.progress,
@@ -122,8 +118,6 @@ if ($(".about").length) {
 
 // info
 if ($(".info").length) {
-	translateElem($(".info h2"), 0, 30, 0);
-
 	var infoTranslate = [];
 
 	$(".info__content > *").each((index, item) => {
@@ -137,8 +131,6 @@ if ($(".info").length) {
 		duration: window.innerHeight / 2,
 	})
 		.on("progress", function (event) {
-			gsap.to($(".info h2"), { y: 30 - 30 * event.progress });
-
 			$(".info__content > *").each((index, item) => {
 				gsap.to($(item), {
 					y: infoTranslate[index] - infoTranslate[index] * event.progress,

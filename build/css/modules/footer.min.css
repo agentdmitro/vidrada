@@ -6,6 +6,8 @@
 @media only screen and (max-width: 576px) {
   .footer {
     padding-bottom: 8rem;
+    padding-top: 2rem;
+    margin-top: 3rem;
   }
 }
 .footer .container {
@@ -20,7 +22,7 @@
 }
 @media only screen and (max-width: 576px) {
   .footer .container {
-    gap: 5rem 4rem;
+    gap: 3rem 2rem;
   }
 }
 .footer__logo {
